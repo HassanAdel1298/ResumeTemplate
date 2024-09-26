@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ResumeTemplate.DTO.Experiences;
 using ResumeTemplate.Entities;
-using ResumeTemplate.ViewModel.Experiences;
+using ResumeTemplate.ViewModel.Educations;
 
 namespace ResumeTemplate.Profiles
 {

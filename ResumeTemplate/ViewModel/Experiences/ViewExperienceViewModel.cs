@@ -2,7 +2,7 @@
 
 namespace ResumeTemplate.ViewModel.Experiences
 {
-    public class ViewEducationViewModel
+    public class ViewExperienceViewModel
     {
         [Required]
         [Range(0, int.MaxValue)]

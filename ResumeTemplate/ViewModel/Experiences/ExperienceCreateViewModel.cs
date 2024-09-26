@@ -2,7 +2,7 @@
 
 namespace ResumeTemplate.ViewModel.Experiences
 {
-    public class EducationCreateViewModel
+    public class ExperienceCreateViewModel
     {
         [Required]
         public string Title { get; set; }

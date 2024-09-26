@@ -7,6 +7,7 @@ using ResumeTemplate.DTO;
 using ResumeTemplate.DTO.Experiences;
 using ResumeTemplate.Helpers;
 using ResumeTemplate.ViewModel;
+using ResumeTemplate.ViewModel.Educations;
 using ResumeTemplate.ViewModel.Experiences;
 
 namespace ResumeTemplate.Controllers
@@ -21,7 +22,7 @@ namespace ResumeTemplate.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<ResultViewModel<ExperienceCreateDTO>> CreateExperience(EducationCreateViewModel experienceViewModel)
+        public async Task<ResultViewModel<ExperienceCreateDTO>> CreateExperience(ExperienceCreateViewModel experienceViewModel)
         {
             int userID;
             bool isUserID = int.TryParse(_userState.ID, out userID);
@@ -48,7 +49,7 @@ namespace ResumeTemplate.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<ResultViewModel<IEnumerable<ExperienceReturnViewDTO>>> GetAllExperiencesByUser(ViewEducationViewModel viewExperienceViewModel)
+        public async Task<ResultViewModel<IEnumerable<ExperienceReturnViewDTO>>> GetAllExperiencesByUser(ViewExperienceViewModel viewExperienceViewModel)
         {
             int userID;
             bool isUserID = int.TryParse(_userState.ID, out userID);
@@ -104,7 +105,7 @@ namespace ResumeTemplate.Controllers
 
         [HttpPut]
         [Authorize]
-        public async Task<ResultViewModel<ExperienceUpdateDTO>> UpdateExperience(EducationUpdateViewModel experienceUpdateViewModel)
+        public async Task<ResultViewModel<ExperienceUpdateDTO>> UpdateExperience(ExperienceUpdateViewModel experienceUpdateViewModel)
         {
             int userID;
             bool isUserID = int.TryParse(_userState.ID, out userID);
